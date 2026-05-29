@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\NavesUSFX2026.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{C26ADD88-1E16-41DB-BE28-9623D8C32580}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\NavesUSFX2026.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\NavesUSFX2026Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{014860E0-CE35-4881-9E97-3DEBEFD53911}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\NavesUSFX2026">
+      <UniqueIdentifier>{E083DDE7-34A0-4DB6-B9B7-B3C9668F05BF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\Bloque.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\Bloque.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\Bonus.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\Bonus.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\Builder.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\Builder.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\ConBuilderDificil.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\ConBuilderDificil.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\ConBuilderFacil.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\ConBuilderFacil.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\DirEscenarioEspacial.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\DirEscenarioEspacial.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\Enemigo.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\Enemigo.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\EnemigoAlien.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\EnemigoAlien.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\EnemigoAnimal.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\EnemigoAnimal.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\GeneradorLaberinto.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\GeneradorLaberinto.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\MiInterface.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\MiInterface.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\NavesUSFX2026\NavesUSFX2026.Build.cs">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\NavesUSFX2026.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\NavesUSFX2026.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\NavesUSFX2026GameMode.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\NavesUSFX2026GameMode.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\NavesUSFX2026Pawn.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\NavesUSFX2026Pawn.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\NavesUSFX2026Projectile.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\NavesUSFX2026Projectile.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\ObstaculoEnemigo.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\ObstaculoEnemigo.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

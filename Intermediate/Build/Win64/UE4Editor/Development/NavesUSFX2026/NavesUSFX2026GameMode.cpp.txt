@@ -1,0 +1,31 @@
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\Definitions.NavesUSFX2026.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\NavesUSFX2026GameMode.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\NavesUSFX2026GameMode.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\NavesUSFX2026Pawn.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\NavesUSFX2026Pawn.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\GeneradorLaberinto.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\GeneradorLaberinto.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\Bloque.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\Bloque.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\Bonus.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\Bonus.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\EnemigoAnimal.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\EnemigoAnimal.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\DirEscenarioEspacial.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\Builder.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\Builder.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\DirEscenarioEspacial.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\ConBuilderFacil.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\ConBuilderFacil.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\ConBuilderDificil.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\ConBuilderDificil.generated.h
