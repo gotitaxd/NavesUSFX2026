@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "Builder.h"	
 #include "ConBuilderDificil.generated.h"
+class AEnemigoAnimal;
+class ABloque;
 
 UCLASS()
 class NAVESUSFX2026_API AConBuilderDificil : public AActor, public IBuilder	
@@ -25,5 +27,9 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	AConBuilderDificil* ObtenerInstancia();
+	AEnemigoAnimal* AEnemigoAnimal2;
+	ABloque* ABloque1;
+
 
 };

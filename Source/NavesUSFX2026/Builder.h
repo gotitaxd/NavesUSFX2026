@@ -20,5 +20,6 @@ class NAVESUSFX2026_API IBuilder
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 	virtual void CrearEnemigos() = 0;
-	virtual void CrearAsteroides() = 0;	
+	virtual void CrearAsteroides() = 0;
+
 };

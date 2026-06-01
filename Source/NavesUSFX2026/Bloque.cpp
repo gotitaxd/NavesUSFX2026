@@ -51,6 +51,6 @@ void ABloque::NotifyActorBeginOverlap(AActor* OtherActor)
 	{
 		OtherActor->TakeDamage(20.f, FDamageEvent(), GetInstigatorController(), this);
 		GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Orange, TEXT(" ¡Asteroide destruido por chocar con la Nave!"));
-		Destroy();
+	 //Destroy();
 	}
 }

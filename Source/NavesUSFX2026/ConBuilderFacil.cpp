@@ -23,17 +23,13 @@ void AConBuilderFacil::CrearEnemigos()
 		FVector PosicionSpawn = FVector(-1200.f, (i * 300.f) + 400.f, 300.f);
 		FRotator RotacionSpawn = FRotator::ZeroRotator;
 
-		GetWorld()->SpawnActor<AEnemigoAnimal>(
-			AEnemigoAnimal::StaticClass(),
-			PosicionSpawn,
-			RotacionSpawn
-		);
+		AEnemigoAnimal1 -> GetWorld()->SpawnActor<AEnemigoAnimal>(AEnemigoAnimal::StaticClass(),PosicionSpawn,RotacionSpawn);
 	}
 }
 
 void AConBuilderFacil::CrearAsteroides()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Generando 5 Asteroides (Modo Fácil)"));
+      GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Generando 5 Asteroides (Modo Fácil)"));
 	if (!GetWorld()) return;
 
 	for (int i = 0; i < 5; i++)
@@ -41,11 +37,7 @@ void AConBuilderFacil::CrearAsteroides()
 		FVector PosicionSpawn = FVector(600.f, i * 200.f, 100.f);
 		FRotator RotacionSpawn = FRotator::ZeroRotator;
 
-		GetWorld()->SpawnActor<ABloque>(
-			ABloque::StaticClass(),
-			PosicionSpawn,
-			RotacionSpawn
-		);
+		ABloque1 -> GetWorld()->SpawnActor<ABloque>(ABloque::StaticClass(),PosicionSpawn,RotacionSpawn);
 	}
 }
 
@@ -63,4 +55,7 @@ void AConBuilderFacil::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-
+ AConBuilderFacil* AConBuilderFacil::ObtenerInstancia()
+{
+	return this;
+}	

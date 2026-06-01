@@ -22,6 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX2026Pawn() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
+	NAVESUSFX2026_API UClass* Z_Construct_UClass_UInterfazObserver_NoRegister();
 // End Cross Module References
 	void ANavesUSFX2026Pawn::StaticRegisterNativesANavesUSFX2026Pawn()
 	{
@@ -53,6 +54,10 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX2026Pawn() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_VidaActual;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PuntajeActual_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_PuntajeActual;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GunOffset_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_GunOffset;
@@ -69,6 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX2026Pawn() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FireSound;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -121,12 +127,19 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX2026Pawn() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_VidaActual_MetaData[] = {
 		{ "Category", "Gameplay" },
-		{ "Comment", "// \xf0\x9f\x8e\xaf Puntos de vida actuales de la nave\n" },
+		{ "Comment", "// \xf0\x9f\x8e\xaf Atributos del jugador\n" },
 		{ "ModuleRelativePath", "NavesUSFX2026Pawn.h" },
-		{ "ToolTip", "\xf0\x9f\x8e\xaf Puntos de vida actuales de la nave" },
+		{ "ToolTip", "\xf0\x9f\x8e\xaf Atributos del jugador" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_VidaActual = { "VidaActual", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANavesUSFX2026Pawn, VidaActual), METADATA_PARAMS(Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_VidaActual_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_VidaActual_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_PuntajeActual_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "ModuleRelativePath", "NavesUSFX2026Pawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_PuntajeActual = { "PuntajeActual", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANavesUSFX2026Pawn, PuntajeActual), METADATA_PARAMS(Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_PuntajeActual_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_PuntajeActual_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_GunOffset_MetaData[] = {
 		{ "Category", "Gameplay" },
@@ -168,11 +181,15 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX2026Pawn() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_CameraComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_CameraBoom,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_VidaActual,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_PuntajeActual,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_GunOffset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_FireRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_MoveSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::NewProp_FireSound,
 	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UInterfazObserver_NoRegister, (int32)VTABLE_OFFSET(ANavesUSFX2026Pawn, IInterfazObserver), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ANavesUSFX2026Pawn>::IsAbstract,
 	};
@@ -183,11 +200,11 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX2026Pawn() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x008000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ANavesUSFX2026Pawn_Statics::Class_MetaDataParams))
 	};
@@ -200,7 +217,7 @@ void EmptyLinkFunctionForGeneratedCodeNavesUSFX2026Pawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANavesUSFX2026Pawn, 930433942);
+	IMPLEMENT_CLASS(ANavesUSFX2026Pawn, 3804180360);
 	template<> NAVESUSFX2026_API UClass* StaticClass<ANavesUSFX2026Pawn>()
 	{
 		return ANavesUSFX2026Pawn::StaticClass();

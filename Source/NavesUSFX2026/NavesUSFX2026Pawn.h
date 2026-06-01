@@ -3,13 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
+#include "GameFramework/Pawn.h"
+#include "InterfazObserver.h" 
 #include "NavesUSFX2026Pawn.generated.h"
 
 class UStaticMeshComponent;
 
 UCLASS(Blueprintable)
-class ANavesUSFX2026Pawn : public APawn
+class ANavesUSFX2026Pawn : public APawn, public IInterfazObserver
 {
 	GENERATED_BODY()
 
@@ -28,11 +29,23 @@ class ANavesUSFX2026Pawn : public APawn
 public:
 	ANavesUSFX2026Pawn();
 
-	// 🎯 Puntos de vida actuales de la nave
+	// 🎯 Atributos del jugador
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
 	float VidaActual;
 
-	// 🛡️ Intercepta los golpes de los enemigos o asteroides
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
+	int32 PuntajeActual; // Se agregó para el Observer de puntaje
+
+	//  MÉTODOS DEL PATRÓN OBSERVER (Sujeto)
+	void RegistrarObserver(IInterfazObserver* NuevoObserver);
+	void EliminarObserver(IInterfazObserver* ObserverAEliminar);
+	void NotificarCambioVida(float NuevaVida);
+	void NotificarCambioPuntaje(int32 NuevoPuntaje);
+
+	// Función auxiliar para sumar puntos desde fuera y notificar
+	void SumarPuntos(int32 Puntos);
+
+	//  Intercepta los golpes de los enemigos o asteroides
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 
 	/** Offset from the ships location to spawn projectiles */
@@ -48,12 +61,15 @@ public:
 	float MoveSpeed;
 
 	/** Sound to play each time we fire */
-	UPROPERTY(Category = Audio, EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio")
 	class USoundBase* FireSound;
 
 	// Begin Actor Interface
 	virtual void Tick(float DeltaSeconds) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
+
+	virtual void OnVidaCambiada(float NuevaVida) override;
+	virtual void OnPuntajeCambiado(int32 NuevoPuntaje) override;
 	// End Actor Interface
 
 	/* Fire a shot in the specified direction */
@@ -69,7 +85,6 @@ public:
 	static const FName FireRightBinding;
 
 private:
-
 	/* Flag to control firing  */
 	uint32 bCanFire : 1;
 
@@ -81,6 +96,9 @@ private:
 	FTimerHandle TimerHandle_Invulnerabilidad;
 	void TerminarInvulnerabilidad();
 
+	// 🎯 Contenedor de todos los observadores escuchando a esta nave
+	TArray<IInterfazObserver*> Observers;
+
 public:
 	/** Returns ShipMeshComponent subobject **/
 	FORCEINLINE class UStaticMeshComponent* GetShipMeshComponent() const { return ShipMeshComponent; }
@@ -89,4 +107,3 @@ public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 };
-

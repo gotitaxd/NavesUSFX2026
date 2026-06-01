@@ -1,0 +1,21 @@
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\Definitions.NavesUSFX2026.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\MyHUD.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DebugTextInfo.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\HUD.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\MyHUD.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\NavesUSFX2026Pawn.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\InterfazObserver.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\InterfazObserver.generated.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\NavesUSFX2026Pawn.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h

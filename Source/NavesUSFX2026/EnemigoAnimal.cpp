@@ -21,7 +21,7 @@ AEnemigoAnimal::AEnemigoAnimal()
 		mallaCilindro = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MallaCilindro"));
 		mallaCilindro->SetupAttachment(RootComponent);
 		mallaCilindro->SetStaticMesh(ObjetoCilindro.Object);
-		mallaCilindro->SetRelativeLocation(FVector(0.f, 0.f, -90.f)); // Lo ajusta al suelo
+		mallaCilindro->SetRelativeLocation(FVector(0.f, 0.f, -90.f)); 
 	}
 }
 //esto se agrego para poder hacer mover el bonus a una posicion especifica, se llama desde el begin play del enemigo animal para que el bonus se mueva a esa posicion despues de 5 segundos
@@ -59,13 +59,13 @@ void AEnemigoAnimal::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 }
 void AEnemigoAnimal::Disparar()
 {
-	AActor* MiNave = GetWorld()->GetFirstPlayerController()->GetPawn();
-	if (MiNave)
-	{
+	//AActor* MiNave = GetWorld()->GetFirstPlayerController()->GetPawn();
+	//if (MiNave)
+	//{
 
-		DrawDebugLine(GetWorld(),GetActorLocation(),MiNave->GetActorLocation(),FColor::Red,false,0.15f,08.f);
-		MiNave->Destroy();
-	}
+		//DrawDebugLine(GetWorld(),GetActorLocation(),MiNave->GetActorLocation(),FColor::Red,false,0.15f,08.f);
+		//MiNave->Destroy();
+	//}
 }
 
 void AEnemigoAnimal::NotifyActorBeginOverlap(AActor* OtherActor)

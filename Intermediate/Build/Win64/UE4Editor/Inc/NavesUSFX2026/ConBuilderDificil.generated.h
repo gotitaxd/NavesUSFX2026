@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NAVESUSFX2026_ConBuilderDificil_generated_h
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_SPARSE_DATA
-#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_RPC_WRAPPERS
-#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_RPC_WRAPPERS_NO_PURE_DECLS
-#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_INCLASS_NO_PURE_DECLS \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_SPARSE_DATA
+#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_RPC_WRAPPERS
+#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAConBuilderDificil(); \
 	friend struct Z_Construct_UClass_AConBuilderDificil_Statics; \
@@ -26,7 +26,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AConBuilderDificil*>(this); }
 
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_INCLASS \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesAConBuilderDificil(); \
 	friend struct Z_Construct_UClass_AConBuilderDificil_Statics; \
@@ -36,7 +36,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AConBuilderDificil*>(this); }
 
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_STANDARD_CONSTRUCTORS \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AConBuilderDificil(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AConBuilderDificil) \
@@ -49,7 +49,7 @@ private: \
 public:
 
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_ENHANCED_CONSTRUCTORS \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AConBuilderDificil(AConBuilderDificil&&); \
@@ -60,28 +60,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AConBuilderDificil)
 
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_PRIVATE_PROPERTY_OFFSET
-#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_10_PROLOG
-#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_GENERATED_BODY_LEGACY \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_PRIVATE_PROPERTY_OFFSET
+#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_12_PROLOG
+#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_PRIVATE_PROPERTY_OFFSET \
-	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_SPARSE_DATA \
-	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_RPC_WRAPPERS \
-	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_INCLASS \
-	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_STANDARD_CONSTRUCTORS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_PRIVATE_PROPERTY_OFFSET \
+	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_SPARSE_DATA \
+	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_RPC_WRAPPERS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_INCLASS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_GENERATED_BODY \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_PRIVATE_PROPERTY_OFFSET \
-	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_SPARSE_DATA \
-	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_INCLASS_NO_PURE_DECLS \
-	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_13_ENHANCED_CONSTRUCTORS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_PRIVATE_PROPERTY_OFFSET \
+	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_SPARSE_DATA \
+	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_INCLASS_NO_PURE_DECLS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_ConBuilderDificil_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

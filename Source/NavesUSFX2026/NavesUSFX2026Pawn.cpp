@@ -12,7 +12,7 @@
 #include "Engine/StaticMesh.h"
 #include "Kismet/GameplayStatics.h"
 #include "Sound/SoundBase.h"
-#include "Engine/Engine.h" // 🎯 IMPORTANTE: Evita errores con GEngine en UE 4.27
+#include "Engine/Engine.h" 
 
 const FName ANavesUSFX2026Pawn::MoveForwardBinding("MoveForward");
 const FName ANavesUSFX2026Pawn::MoveRightBinding("MoveRight");
@@ -35,15 +35,15 @@ ANavesUSFX2026Pawn::ANavesUSFX2026Pawn()
 	// Create a camera boom...
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
-	CameraBoom->SetUsingAbsoluteRotation(true); // Don't want arm to rotate when ship does
+	CameraBoom->SetUsingAbsoluteRotation(true);
 	CameraBoom->TargetArmLength = 1200.f;
 	CameraBoom->SetRelativeRotation(FRotator(-80.f, 0.f, 0.f));
-	CameraBoom->bDoCollisionTest = false; // Don't want to pull camera in when it collides with level
+	CameraBoom->bDoCollisionTest = false;
 
 	// Create a camera...
 	CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("TopDownCamera"));
 	CameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
-	CameraComponent->bUsePawnControlRotation = false;	// Camera does not rotate relative to arm
+	CameraComponent->bUsePawnControlRotation = false;
 
 	// Movement
 	MoveSpeed = 1000.0f;
@@ -52,8 +52,9 @@ ANavesUSFX2026Pawn::ANavesUSFX2026Pawn()
 	FireRate = 0.1f;
 	bCanFire = true;
 
-	// 🎯 Atributos de Vida e Invulnerabilidad iniciales
+	// 🎯 Inicialización de Atributos
 	VidaActual = 500.f;
+	PuntajeActual = 0; // Inicializamos el puntaje
 	bEsInvulnerable = false;
 }
 
@@ -61,7 +62,6 @@ void ANavesUSFX2026Pawn::SetupPlayerInputComponent(class UInputComponent* Player
 {
 	check(PlayerInputComponent);
 
-	// set up gameplay key bindings
 	PlayerInputComponent->BindAxis(MoveForwardBinding);
 	PlayerInputComponent->BindAxis(MoveRightBinding);
 	PlayerInputComponent->BindAxis(FireForwardBinding);
@@ -74,13 +74,9 @@ void ANavesUSFX2026Pawn::Tick(float DeltaSeconds)
 	const float ForwardValue = GetInputAxisValue(MoveForwardBinding);
 	const float RightValue = GetInputAxisValue(MoveRightBinding);
 
-	// Clamp max size so that (X=1, Y=1) doesn't cause faster movement in diagonal directions
 	const FVector MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
-
-	// Calculate  movement
 	const FVector Movement = MoveDirection * MoveSpeed * DeltaSeconds;
 
-	// If non-zero size, move this actor
 	if (Movement.SizeSquared() > 0.0f)
 	{
 		const FRotator NewRotation = Movement.Rotation();
@@ -95,42 +91,38 @@ void ANavesUSFX2026Pawn::Tick(float DeltaSeconds)
 		}
 	}
 
-	// Create fire direction vector
 	const float FireForwardValue = GetInputAxisValue(FireForwardBinding);
 	const float FireRightValue = GetInputAxisValue(FireRightBinding);
 	const FVector FireDirection = FVector(FireForwardValue, FireRightValue, 0.f);
 
-	// Try and fire a shot
 	FireShot(FireDirection);
 }
 
 void ANavesUSFX2026Pawn::FireShot(FVector FireDirection)
 {
-	// If it's ok to fire again
 	if (bCanFire == true)
 	{
-		// If we are pressing fire stick in a direction
 		if (FireDirection.SizeSquared() > 0.0f)
 		{
 			const FRotator FireRotation = FireDirection.Rotation();
-			// Spawn projectile at an offset from this pawn
 			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
 
 			UWorld* const World = GetWorld();
 			if (World != nullptr)
 			{
-				// spawn the projectile
 				World->SpawnActor<ANavesUSFX2026Projectile>(SpawnLocation, FireRotation);
 			}
 
 			bCanFire = false;
 			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &ANavesUSFX2026Pawn::ShotTimerExpired, FireRate);
 
-			// try and play the sound if specified
 			if (FireSound != nullptr)
 			{
 				UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 			}
+
+			// 🎯 TRUCO DE PRUEBA: Sumamos puntos al disparar y el Observer avisará al HUD
+			SumarPuntos(10);
 
 			bCanFire = false;
 		}
@@ -142,29 +134,28 @@ void ANavesUSFX2026Pawn::ShotTimerExpired()
 	bCanFire = true;
 }
 
-// 🛡️ Lógica de daño con escudo de invulnerabilidad temporal
+// 🛡️ Lógica de daño corregida y conectada al Observer
 float ANavesUSFX2026Pawn::TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser)
 {
-	// Si ya morimos o somos invulnerables, ignoramos el golpe
 	if (bEsInvulnerable || VidaActual <= 0.f)
 	{
 		return 0.f;
 	}
 
 	float DamageAplicado = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-	VidaActual -= DamageAplicado;
+	VidaActual -= DamageAmount;
 
-	// Imprime la vida en pantalla en color verde
+	// 🎯 INFORMAR AL HUD INMEDIATAMENTE MEDIANTE EL OBSERVER
+	NotificarCambioVida(VidaActual);
+
 	if (GEngine)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Green, FString::Printf(TEXT("❤️ Vida de la Nave: %.0f / 500"), VidaActual));
 	}
 
-	// Activamos invulnerabilidad por 0.5 segundos para evitar recibir daño ráfaga por colisión continua
 	bEsInvulnerable = true;
 	GetWorld()->GetTimerManager().SetTimer(TimerHandle_Invulnerabilidad, this, &ANavesUSFX2026Pawn::TerminarInvulnerabilidad, 0.5f, false);
 
-	// Si nos quedamos sin vida, destruimos el actor
 	if (VidaActual <= 0.f)
 	{
 		if (GEngine)
@@ -180,4 +171,57 @@ float ANavesUSFX2026Pawn::TakeDamage(float DamageAmount, struct FDamageEvent con
 void ANavesUSFX2026Pawn::TerminarInvulnerabilidad()
 {
 	bEsInvulnerable = false;
+}
+
+
+void ANavesUSFX2026Pawn::RegistrarObserver(IInterfazObserver* NuevoObserver)
+{
+	if (NuevoObserver)
+	{
+		Observers.AddUnique(NuevoObserver);
+	}
+}
+
+void ANavesUSFX2026Pawn::EliminarObserver(IInterfazObserver* ObserverAEliminar)
+{
+	if (ObserverAEliminar)
+	{
+		Observers.Remove(ObserverAEliminar);
+	}
+}
+
+void ANavesUSFX2026Pawn::NotificarCambioVida(float NuevaVida)
+{
+	for (IInterfazObserver* Observer : Observers)
+	{
+		if (Observer)
+		{
+			Observer->OnVidaCambiada(NuevaVida); // El HUD recibe la señal aquí
+		}
+	}
+}
+
+void ANavesUSFX2026Pawn::NotificarCambioPuntaje(int32 NuevoPuntaje)
+{
+	for (IInterfazObserver* Observer : Observers)
+	{
+		if (Observer)
+		{
+			Observer->OnPuntajeCambiado(NuevoPuntaje); 
+		}
+	}
+}
+
+void ANavesUSFX2026Pawn::SumarPuntos(int32 Puntos)
+{
+	PuntajeActual += Puntos;
+	NotificarCambioPuntaje(PuntajeActual);
+}
+void ANavesUSFX2026Pawn::OnVidaCambiada(float NuevaVida)
+{
+	
+}	
+void ANavesUSFX2026Pawn::OnPuntajeCambiado(int32 NuevoPuntaje)
+{
+
 }

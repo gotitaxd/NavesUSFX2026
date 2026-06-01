@@ -1,0 +1,3 @@
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\Definitions.NavesUSFX2026.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Source\NavesUSFX2026\Builder.h
+C:\Users\Administrator\Downloads\NavesUSFX2026-master\NavesUSFX2026-master\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\Builder.generated.h

@@ -31,5 +31,5 @@ public:
 private:
 	// Puntero para almacenar el builder actual
 	IBuilder* EscenarioBuilder;
-
+		
 };

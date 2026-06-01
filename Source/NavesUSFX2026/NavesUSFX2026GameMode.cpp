@@ -5,7 +5,7 @@
 #include "GeneradorLaberinto.h"
 #include "Engine/World.h"
 #include "Bloque.h"
-#include "Bonus.h" // Agrega esta línea al inicio del archivo para incluir la definición completa de ABonus
+#include "Bonus.h" 
 #include "EnemigoAnimal.h"
 #include "DirEscenarioEspacial.h"
 #include "ConBuilderFacil.h"
@@ -70,10 +70,7 @@ void ANavesUSFX2026GameMode::BeginPlay()
         UE_LOG(LogTemp, Warning, TEXT("GameMode: Bloque %d en posicion (%f, %f, %f)"), i, BonusActual->GetActorLocation().X, BonusActual->GetActorLocation().Y, BonusActual->GetActorLocation().Z);
 	}
 
-	AEnemigoAnimal* EnemigoActual = GetWorld()->SpawnActor<AEnemigoAnimal>(
-        AEnemigoAnimal::StaticClass(),
-        FVector::ZeroVector,
-        FRotator::ZeroRotator
+	AEnemigoAnimal* EnemigoActual = GetWorld()->SpawnActor<AEnemigoAnimal>(AEnemigoAnimal::StaticClass(),FVector::ZeroVector,FRotator::ZeroRotator
     );
     //IMPLEMENTACION  DEL PATRÓN BUILDER 
 

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\NavesUSFX2026.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C26ADD88-1E16-41DB-BE28-9623D8C32580}</UniqueIdentifier>
+      <UniqueIdentifier>{898CB191-BF2C-49F0-AFB9-BD0AE417C990}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\NavesUSFX2026.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{014860E0-CE35-4881-9E97-3DEBEFD53911}</UniqueIdentifier>
+      <UniqueIdentifier>{796AF473-A1EB-47B9-B9A9-9D914CBB79AB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\NavesUSFX2026">
-      <UniqueIdentifier>{E083DDE7-34A0-4DB6-B9B7-B3C9668F05BF}</UniqueIdentifier>
+      <UniqueIdentifier>{72E0391D-212C-4E92-94E3-564DDFC82375}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\NavesUSFX2026\Bloque.cpp">
       <Filter>Source\NavesUSFX2026</Filter>
@@ -94,10 +94,22 @@
     <ClInclude Include="..\..\Source\NavesUSFX2026\GeneradorLaberinto.h">
       <Filter>Source\NavesUSFX2026</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\InterfazObserver.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\InterfazObserver.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\NavesUSFX2026\MiInterface.cpp">
       <Filter>Source\NavesUSFX2026</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\NavesUSFX2026\MiInterface.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\MyHUD.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\MyHUD.h">
       <Filter>Source\NavesUSFX2026</Filter>
     </ClInclude>
     <None Include="..\..\Source\NavesUSFX2026\NavesUSFX2026.Build.cs">

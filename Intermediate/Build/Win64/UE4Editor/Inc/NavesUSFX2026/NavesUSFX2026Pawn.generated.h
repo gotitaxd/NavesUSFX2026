@@ -13,28 +13,30 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NAVESUSFX2026_NavesUSFX2026Pawn_generated_h
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_SPARSE_DATA
-#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_RPC_WRAPPERS
-#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_RPC_WRAPPERS_NO_PURE_DECLS
-#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_INCLASS_NO_PURE_DECLS \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_SPARSE_DATA
+#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_RPC_WRAPPERS
+#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANavesUSFX2026Pawn(); \
 	friend struct Z_Construct_UClass_ANavesUSFX2026Pawn_Statics; \
 public: \
 	DECLARE_CLASS(ANavesUSFX2026Pawn, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NavesUSFX2026"), NO_API) \
-	DECLARE_SERIALIZER(ANavesUSFX2026Pawn)
+	DECLARE_SERIALIZER(ANavesUSFX2026Pawn) \
+	virtual UObject* _getUObject() const override { return const_cast<ANavesUSFX2026Pawn*>(this); }
 
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_INCLASS \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesANavesUSFX2026Pawn(); \
 	friend struct Z_Construct_UClass_ANavesUSFX2026Pawn_Statics; \
 public: \
 	DECLARE_CLASS(ANavesUSFX2026Pawn, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NavesUSFX2026"), NO_API) \
-	DECLARE_SERIALIZER(ANavesUSFX2026Pawn)
+	DECLARE_SERIALIZER(ANavesUSFX2026Pawn) \
+	virtual UObject* _getUObject() const override { return const_cast<ANavesUSFX2026Pawn*>(this); }
 
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_STANDARD_CONSTRUCTORS \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ANavesUSFX2026Pawn(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ANavesUSFX2026Pawn) \
@@ -47,7 +49,7 @@ private: \
 public:
 
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_ENHANCED_CONSTRUCTORS \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ANavesUSFX2026Pawn(ANavesUSFX2026Pawn&&); \
@@ -58,33 +60,33 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANavesUSFX2026Pawn)
 
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_PRIVATE_PROPERTY_OFFSET \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ShipMeshComponent() { return STRUCT_OFFSET(ANavesUSFX2026Pawn, ShipMeshComponent); } \
 	FORCEINLINE static uint32 __PPO__CameraComponent() { return STRUCT_OFFSET(ANavesUSFX2026Pawn, CameraComponent); } \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ANavesUSFX2026Pawn, CameraBoom); }
 
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_11_PROLOG
-#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_GENERATED_BODY_LEGACY \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_12_PROLOG
+#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_PRIVATE_PROPERTY_OFFSET \
-	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_SPARSE_DATA \
-	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_RPC_WRAPPERS \
-	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_INCLASS \
-	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_STANDARD_CONSTRUCTORS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_PRIVATE_PROPERTY_OFFSET \
+	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_SPARSE_DATA \
+	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_RPC_WRAPPERS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_INCLASS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_GENERATED_BODY \
+#define NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_PRIVATE_PROPERTY_OFFSET \
-	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_SPARSE_DATA \
-	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_INCLASS_NO_PURE_DECLS \
-	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_14_ENHANCED_CONSTRUCTORS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_PRIVATE_PROPERTY_OFFSET \
+	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_SPARSE_DATA \
+	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_INCLASS_NO_PURE_DECLS \
+	NavesUSFX2026_master_Source_NavesUSFX2026_NavesUSFX2026Pawn_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

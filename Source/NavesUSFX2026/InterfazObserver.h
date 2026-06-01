@@ -6,20 +6,18 @@
 #include "UObject/Interface.h"
 #include "InterfazObserver.generated.h"
 
-// This class does not need to be modified.
 UINTERFACE(MinimalAPI)
 class UInterfazObserver : public UInterface
 {
 	GENERATED_BODY()
 };
 
-/**
- * 
- */
 class NAVESUSFX2026_API IInterfazObserver
 {
 	GENERATED_BODY()
 
-	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
+	// Funciones que ejecutarán los observadores cuando el jugador avise un cambio
+	virtual void OnVidaCambiada(float NuevaVida) = 0;
+	virtual void OnPuntajeCambiado(int32 NuevoPuntaje) = 0;
 };
